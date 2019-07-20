@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         appContext = getApplicationContext();
-        CLIENT_ID = getString(R.string.client_id);
-        REDIRECT_URI = "sc" + getString(R.string.client_id) + "://exchange";
+        CLIENT_ID = "b7797130-5ee2-4da3-859a-43aadb684e1e";
+        REDIRECT_URI = "sc" + "b7797130-5ee2-4da3-859a-43aadb684e1e" + "://exchange";
         SCOPE = new String[]{"required:read_vehicle_info"};
 
         smartcarAuth = new SmartcarAuth(
