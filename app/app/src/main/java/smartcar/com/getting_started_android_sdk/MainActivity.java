@@ -16,6 +16,8 @@ import java.io.IOException;
 
 import okhttp3.*;
 
+import java.util.Date;
+
 public class MainActivity extends AppCompatActivity {
 
     private static String CLIENT_ID;
@@ -95,5 +97,21 @@ public class MainActivity extends AppCompatActivity {
         Button connectButton = (Button) findViewById(R.id.connect_button);
 
         smartcarAuth.addClickHandler(appContext, connectButton);
+
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                DateFormat dateFormat = new SimpleDateFormat("HH:mm");
+                Daate night = dateformat.parse("23:00");
+                while true {
+                    if (dateFormat.format(new Date()).after(night)) {
+                        
+                    }
+                    Thread.sleep(1000);
+                }
+            }
+        }).start();
     }
+     
 }
